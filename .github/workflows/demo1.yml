@@ -1,8 +1,7 @@
 name: Events Demo 1
 on:
  pull_request:
-    types: 
-        - opened
+    types: opened
  wokflow_dispatch:
 
 jobs:
@@ -12,7 +11,7 @@ jobs:
       - name: Output event data-1
         run: echo "${{ toJSON(github.event) }}"
       - name: Get code
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
       - name: Install dependencies
         run: npm ci
       - name: Test code
