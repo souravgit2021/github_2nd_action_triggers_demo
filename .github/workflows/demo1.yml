@@ -4,12 +4,12 @@ on:
     types: 
         - opened
  wokflow_dispatch:
- 
+
 jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
-      - name: Output event data
+      - name: Output event data-1
         run: echo "${{ toJSON(github.event) }}"
       - name: Get code
         uses: actions/checkout@v3
